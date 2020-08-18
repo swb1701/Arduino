@@ -13,7 +13,7 @@
 
 	I'm running this on the Wemos D1 Mini.
 
-        It uses a single neopixel as an indicator light (replacing where the Imp did blink-up).
+    It uses a single neopixel as an indicator light (replacing where the Imp did blink-up).
 
 	--Scott Bennett, 2020-08-16
 */
