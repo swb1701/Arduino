@@ -1,0 +1,58 @@
+Analysis of Porkfolio Pins:
+
+1 = gnd
+2 = phototransistor power (collector)
+pin 3 to gnd green
+pin 4 to gnd red
+5 = (power_en -- driven high to wake up)
+6 = phototransistor signal (emmitter)
+7 = gnd
+8 = (PA)
+pin 9 to serial (PB)
+10 = (PC)
+11 = (PD)
+12 = (PE)
+13 = gnd
+
+14-22
+
+14 = I2-SDA (P9) (Likely I2C SDA)
+
+15 = I1-SCL (P1) PWM/ADC/Pulse Count/Wake (rising edge wakes)
+
+pin 16 = R (I1-SDA) (P2) PWM/ADC (probably PWM)
+18 = +3
+pin 19 = G (P5) PWM/DAC/ADC (probably PWM)
+20 = (P6) U6-TX
+pin 21 = B (P7) PWM/ADC (probably PWM)
+22 = I2-SCL (P8) (Likely I2C SCL)
+
+23-35
+
+23-32 = gnd
+
+33 = +3
+34 = +3 (adc ref)
+35 = gnd
+
+Proposed D1 Mini Connections
+
+33 = 3.3V
+35 = GND
+14 = D2 (SDA) (I2C to accelerometer, adc, temp chip)
+22 = D1 (SCL)
+15 = D7 (Serial) (600 Baud In)
+16 = D0 (Red) PD
+19 = D5 (Green) PD
+21 = D6 (Blue) PD
+3 =  D3 (Green2) PD
+4 =  D4 (Red2) PD
+2 = D8  (Photo Power) (could use as dummy for software serial for write)
+6 = A0  (Photo Emmitter)
+
+Connections to coin receiver:
+
+yellow = + 3
+red = black logic (enable) (goes high during coin receipt)
+green = brown logic (serial) (pulses gives coin type)
+black = gray logic (ground)
